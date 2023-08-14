@@ -1,0 +1,167 @@
+header{
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(5px);
+}
+
+header.rolagem{
+    background-color:#453d38;
+}
+
+.logo{
+    display: flex;
+    align-items: center; 
+}
+
+.logo img{
+    max-width: 100px;
+}
+
+.logo i{
+    color: $red-light;
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span{
+    color: $white-normal;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+     color: $white-normal;
+     font-size: 1.1rem;
+     font-weight: 500;
+     padding: 5px 0;
+     margin: 0px 30px;
+     transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color: $red-light;
+}
+
+.navbar a.active{
+    color:$red-light;
+}
+
+
+
+#menu-icon{
+    font-size: 28px;
+    color: $white-normal;
+    z-index:1000;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+.header-logo img{
+    padding: 150px;
+    margin-top: 20px;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i{
+    color: $white-normal;
+}
+
+.header-icons{
+    display: flex;
+    gap: 14px;  
+}
+
+.header-icons i{
+    font-size: 25px;
+}
+
+
+.header-icons a:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color: $red-light;
+    }
+}
+
+@keyframes translateY{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.header-button{
+    border: 1px solid $white-normal;
+    padding: 8px 24px ;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: transparent;
+    transition: background-color 0.8s;
+
+}
+
+.header-button:hover{
+    border: 1px solid $red-light;
+    background-color: $red-light;
+    color: #fff;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+
+@media screen and (max-width: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+    }
+    .header-logo img{
+        width: 300px;
+        margin-top: 30px;
+        padding: 80px;
+    }
+
+    .header-button{
+        display: none;
+    }
+    header{
+        height: 5%;
+    }
+
+}
