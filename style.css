@@ -335,6 +335,21 @@ i {
   margin-bottom: 14px;
   text-align: center;
   max-width: 780px;
+  font-size: 18px;
+}
+
+.services-content h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 14px;
+  margin-top: 30px;
+}
+
+.trabalho-pair {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 20px;
 }
 
 .trabalhos {
@@ -343,6 +358,7 @@ i {
   align-items: center;
   gap: 13px;
   padding: 0 44px 34px 44px;
+  margin-top: 50px;
 }
 
 .trabalho {
@@ -366,8 +382,83 @@ i {
 }
 
 @media screen and (max-width: 768px) {
-  .trabalhos {
+  .trabalho-pair {
     flex-direction: column;
+  }
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.overlay-image {
+  max-width: 28%;
+  max-height: 90vh;
+}
+
+.overlay-content {
+  position: relative;
+  text-align: center;
+}
+
+.custom-prev-btn,
+.custom-next-btn {
+  background-color: #333; /* Customize the background color */
+  color: #fff; /* Customize the text color */
+  font-size: 24px; /* Customize the font size for the arrows */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-prev-btn {
+  left: 10px; /* Adjust the distance from the left side */
+  content: "u2190"; /* Left arrow character */
+}
+
+.custom-next-btn {
+  right: 10px; /* Adjust the distance from the right side */
+  content: "u2192"; /* Right arrow character */
+}
+
+.custom-prev-btn:hover,
+.custom-next-btn:hover {
+  background-color: #902b2e; /* Change color on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .overlay-image {
+    max-width: 70%;
+    max-height: 100vh;
   }
 }
 .footer {
